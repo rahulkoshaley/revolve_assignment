@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[4]:
+# In[6]:
 
 
 class FilesPath(object): 
@@ -55,7 +55,7 @@ df6= df5.select(df5.date_of_purchase ,df5.customer_id,explode(df5.basket.product
 
 
 
-FinalWriteDF = df1.join(df6, df1.customer_id == df6.customer_id).join(df2, df2.product_id==df6.product_id).select(lit(df1["loyalty_score"]),df6["*"],df2['product_category']).select('customer_id', lit('loyalty_score'), 'date_of_purchase', 'product_category','product_id' ,count('product_id').over(w).alias('product_count')).sort('customer_id').drop('date_of_purchase').dropDuplicates()#.show(truncate=False)
+FinalWriteDF = df1.join(df6, df1.customer_id == df6.customer_id).join(df2, df2.product_id==df6.product_id).select(lit(df1["loyalty_score"]),df6["*"],df2['product_category']).select('customer_id', lit('loyalty_score'), 'date_of_purchase', 'product_category','product_id' ,count('product_id').over(w).alias('purchase_count')).sort('customer_id').drop('date_of_purchase').dropDuplicates()#.show(truncate=False)
 FinalWriteDF.printSchema()
 
 
