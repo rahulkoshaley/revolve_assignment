@@ -45,4 +45,6 @@ The code instructions are given in the jupyter notebook evolve.ipnyb and unittes
 
 After downloading the data and jupyter notebooks , only change the file paths as per your computer and run the ipynb files
 
+Also provided all the .py files
+
 
