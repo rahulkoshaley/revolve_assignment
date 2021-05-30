@@ -1,3 +1,26 @@
+
+if pip not installed then
+
+$ sudo apt update
+$ sudo apt install python3-pip
+$ pip3 --version
+
+
+Activate tne Environment - 
+
+1) Using virtualenv
+    step1 - pip3 install virtualenv
+    step2 - python3.7 -m virtualenv MyEnv
+    step3 - source MyEnv/bin/activate
+
+OR
+
+2) Using conda
+
+$ conda actiavte env1 
+
+
+
 download spark from -> https://spark.apache.org/downloads.html
 
 $ tar -xvf spark-3.1.1-bin-hadoop2.7
@@ -20,25 +43,14 @@ export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
 
 export PYSPARK_PYTHON=/usr/bin/python3.7
 
-Activate tne Environment - 
-
-1) Using virtualenv
-    step1 - pip3 install virtualenv
-    step2 - python3.7 -m virtualenv MyEnv
-    step3 - source MyEnv/bin/activate
-
-OR
-
-2) Using conda
-
-$ conda actiavte env1 
 
 
 
-pip install pyspark
-pip install pytest
-pip install findspark
-pip install unittest-pyspark
+
+pip3 install pyspark
+pip3 install pytest
+pip3 install findspark
+pip3 install unittest-pyspark
 
 
 The code instructions are given in the jupyter notebook evolve.ipnyb and unittest.ipnyb file
